@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra en el header */
+}
+
+header input {
+    padding: 10px; /* Aumentar el padding para mejor usabilidad */
+    width: 220px;
+    border: 1px solid #ccc; /* Añadir borde para mejor visibilidad */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+header input:focus {
+    border-color: #4CAF50; /* Cambiar color del borde al enfocar */
+    outline: none; /* Eliminar el contorno por defecto */
+}
+
+header button {
+    padding: 10px 15px; /* Aumentar el padding para mejor usabilidad */
+    margin-left: 5px;
+    background: white;
+    color: #4CAF50;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+header button:hover {
+    background: #f1f1f1; /* Efecto hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9; /* Fondo claro para el main */
+}
+
+#newsContainer {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#newsContainer article {
+    border: 1px solid #ccc;
+    padding: 15px; /* Aumentar el padding para mejor legibilidad */
+    border-radius: 5px;
+    background: white; /* Fondo blanco para artículos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en artículos */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+#newsContainer article:hover {
+    transform: scale(1.02); /* Efecto hover en artículos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el mouse */
+}
+
+aside {
+    flex: 1;
+    margin-left: 20px;
+    background: #fff; /* Fondo blanco para el aside */
+    padding: 15px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en aside */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Sombra en el header oscuro */
+}
+
+body.dark-mode button {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+body.dark-mode #newsContainer article {
+    background-color: #1e1e1e; /* Fondo de artículos en modo oscuro */
+    border: 1px solid #333; /* Borde más oscuro en modo oscuro */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra en artículos oscuros */
+}
+
+body.dark-mode aside {
+    background: #1e1e1e; /* Fondo oscuro para el aside */
+    border: 1px solid #333; /* Borde más oscuro en modo oscuro */
+}
