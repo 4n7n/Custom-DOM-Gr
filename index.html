@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestor de Noticias</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Gestor de Noticias</h1>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar noticias...">
+            <button id="searchButton">Buscar</button>
+            <select id="category">
+                <option value="general">General</option>
+                <option value="technology">Tecnología</option>
+                <option value="sports">Deportes</option>
+                <option value="business">Negocios</option>
+                <option value="health">Salud</option>
+            </select>
+            <label for="sort">Ordenar por:</label>
+            <select id="sort" aria-label="Seleccionar orden">
+                <option value="publishedAt">Fecha</option>
+                <option value="popularity">Popularidad</option>
+                <option value="relevancy">Relevancia</option>
+            </select>
+            <button id="toggleTheme" aria-label="Cambiar a modo oscuro">Modo Oscuro</button>
+        </nav>
+    </header>
+    <main>
+        <section id="newsContainer"></section>
+        <aside>
+            <h2>Favoritos</h2>
+            <ul id="favoritesList"></ul>
+        </aside>
+    </main>
+    <footer>
+        <button id="prevPage">Anterior</button>
+        <span id="pageInfo">Página 1</span>
+        <button id="nextPage">Siguiente</button>
+    </footer>
+    <script src="main.js"></script>
 </body>
+
 </html>
