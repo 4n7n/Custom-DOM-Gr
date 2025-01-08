@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,9 @@
     <header>
         <h1>Gestor de Noticias</h1>
         <div class="search-container">
-            <input type="text" id="search" placeholder="Buscar noticias...">
-            <button id="searchButton">Buscar</button>
-            <select id="category">
+            <input type="text" id="search" placeholder="Buscar noticias..." aria-label="Buscar noticias">
+            <button id="searchButton" aria-label="Buscar">Buscar</button>
+            <select id="category" aria-label="Seleccionar categoría">
                 <option value="general">General</option>
                 <option value="technology">Tecnología</option>
                 <option value="sports">Deportes</option>
@@ -28,20 +28,27 @@
                 <option value="relevancy">Relevancia</option>
             </select>
             <button id="toggleTheme" aria-label="Cambiar a modo oscuro">Modo Oscuro</button>
-        </nav>
+        </div>
     </header>
+    
     <main>
-        <section id="newsContainer"></section>
+        <section id="newsContainer" aria-labelledby="newsHeading">
+            <h2 id="newsHeading" class="visually-hidden">Noticias</h2>
+        </section>
+        
         <aside>
             <h2>Favoritos</h2>
-            <ul id="favoritesList"></ul>
+            <ul id="favoritesList" aria-labelledby="favoritesHeading"></ul>
         </aside>
     </main>
+    
     <footer>
-        <button id="prevPage">Anterior</button>
-        <span id="pageInfo">Página 1</span>
-        <button id="nextPage">Siguiente</button>
+        <button id="prevPage" aria-label="Página anterior">Anterior</button>
+        <span id="pageInfo" aria-live="polite">Página 1</span>
+        <button id="nextPage" aria-label="Página siguiente">Siguiente</button>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>

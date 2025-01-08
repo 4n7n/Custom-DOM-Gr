@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+    line-height: 1.6; /* Mejora la legibilidad */
 }
 
 header {
@@ -38,6 +39,7 @@ header button {
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Texto más destacado */
 }
 
 header button:hover {
