@@ -1,0 +1,11 @@
+/* favorites-styles.css */
+
+/* Estilos de Favoritos */
+#favoritesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.favorite-details {
+    display: none;
+}
