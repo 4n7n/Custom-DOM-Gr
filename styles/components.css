@@ -1,0 +1,55 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-container input,
+.search-container select {
+    padding: 10px; /* Aumentar el padding para mejor usabilidad */
+    border: 1px solid #ccc; /* Añadir borde para mejor visibilidad */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+.search-container input:focus,
+.search-container select:focus {
+    border-color: #007BFF; /* Cambiar color del borde al enfocar */
+    outline: none; /* Eliminar el contorno por defecto */
+}
+
+.search-container button {
+    padding: 10px 15px; /* Aumentar el padding para mejor usabilidad */
+    margin-left: 5px;
+    background: white;
+    color: #007BFF; /* Color azul */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Texto más destacado */
+}
+
+#newsContainer article {
+    border: none; /* Sin borde */
+    padding: 15px; /* Aumentar el padding para mejor legibilidad */
+    border-radius: 10px; /* Bordes redondeados */
+    background: #e0e0e0; /* Fondo gris claro para diferenciar artículos */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    overflow: hidden; /* Evitar que el contenido se desborde */
+    position: relative; /* Para el efecto de hover */
+}
+
+#newsContainer article button {
+    padding: 8px 12px; /* Aumentar el padding para el botón */
+    background: #ffcc00; /* Fondo amarillo */
+    color: #000; /* Color del texto negro */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Texto más destacado */
+    margin-top: 10px; /* Margen superior */
+}

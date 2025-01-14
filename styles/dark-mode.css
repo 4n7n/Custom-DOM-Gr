@@ -1,0 +1,36 @@
+body.dark-mode #newsContainer article {
+    background-color: #1e1e1e; /* Fondo de artículos en modo oscuro */
+    border: 1px solid #333; /* Borde más oscuro en modo oscuro */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra en artículos oscuros */
+}
+
+body.dark-mode #newsContainer article h3 {
+    color: #ffffff; /* Color del título en artículos en modo oscuro */
+}
+
+body.dark-mode #newsContainer article p {
+    color: #ddd; /* Color del texto de descripción en modo oscuro */
+}
+
+body.dark-mode aside {
+    background: #1e1e1e; /* Fondo oscuro para el aside */
+    border: 1px solid #333; /* Borde más oscuro en modo oscuro */
+}
+
+body.dark-mode aside h2 {
+    color: #ffffff; /* Color del título en modo oscuro */
+}
+
+body.dark-mode aside li {
+    background: #2a2a2a; /* Fondo oscuro para los elementos de la lista */
+    color: #ffffff; /* Color del texto en los elementos de la lista */
+}
+
+body.dark-mode aside li:hover {
+    background: #333; /* Fondo más oscuro al pasar el mouse en modo oscuro */
+}
+
+body.dark-mode footer button {
+    background: #007BFF; /* Fondo azul para botones en modo oscuro */
+    color: white; /* Texto blanco para botones */
+}

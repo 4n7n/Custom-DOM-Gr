@@ -1,0 +1,24 @@
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9; /* Fondo claro para el main */
+}
+
+#newsContainer {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+aside {
+    flex: 1;
+    margin-left: 20px;
+    background: #fff; /* Fondo blanco para el aside */
+    padding: 10px; /* Reducir padding */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en aside */
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+}
