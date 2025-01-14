@@ -84,3 +84,19 @@ body.dark-mode {
 body.dark-mode header {
     background-color: #1e1e1e;
 }
+
+/* Estilos para el pie de página en modo oscuro */
+body.dark-mode footer {
+    background-color: #1e1e1e; /* Fondo oscuro para el pie de página */
+    color: #ffffff; /* Color del texto en modo oscuro */
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1); /* Sombra en el pie de página oscuro */
+}
+
+body.dark-mode footer button {
+    background: #007BFF; /* Fondo azul para botones en modo oscuro */
+    color: white; /* Texto blanco para botones */
+}
+
+body.dark-mode footer button:hover {
+    background: #0056b3; /* Fondo azul más oscuro al pasar el mouse en modo oscuro */
+}
