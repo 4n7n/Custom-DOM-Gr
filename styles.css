@@ -10,14 +10,21 @@ body {
 }
 
 header {
-    background: #4CAF50;
+    background: #007BFF; /* Color azul */
     color: white;
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra en el header */
 }
 
-header input {
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-container input {
     padding: 10px; /* Aumentar el padding para mejor usabilidad */
     width: 220px;
     border: 1px solid #ccc; /* Añadir borde para mejor visibilidad */
@@ -25,16 +32,16 @@ header input {
     transition: border-color 0.3s; /* Transición suave para el borde */
 }
 
-header input:focus {
-    border-color: #4CAF50; /* Cambiar color del borde al enfocar */
+.search-container input:focus {
+    border-color: #007BFF; /* Cambiar color del borde al enfocar */
     outline: none; /* Eliminar el contorno por defecto */
 }
 
-header button {
+.search-container button {
     padding: 10px 15px; /* Aumentar el padding para mejor usabilidad */
     margin-left: 5px;
     background: white;
-    color: #4CAF50;
+    color: #007BFF; /* Color azul */
     border: none;
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer;
@@ -42,7 +49,7 @@ header button {
     font-weight: bold; /* Texto más destacado */
 }
 
-header button:hover {
+.search-container button:hover {
     background: #f1f1f1; /* Efecto hover */
     transform: translateY(-2px); /* Efecto de elevación */
 }
@@ -62,31 +69,126 @@ main {
 }
 
 #newsContainer article {
-    border: 1px solid #ccc;
+    border: none; /* Sin borde */
     padding: 15px; /* Aumentar el padding para mejor legibilidad */
-    border-radius: 5px;
-    background: white; /* Fondo blanco para artículos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en artículos */
+    border-radius: 10px; /* Bordes redondeados */
+    background: #e0e0e0; /* Fondo gris claro para diferenciar artículos */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
     transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    overflow: hidden; /* Evitar que el contenido se desborde */
+    position: relative; /* Para el efecto de hover */
 }
 
 #newsContainer article:hover {
-    transform: scale(1.02); /* Efecto hover en artículos */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el mouse */
+    transform: translateY(-5px); /* Efecto de elevación en artículos */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el mouse */
+}
+
+#newsContainer article img {
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+    width: 100%; /* Ajustar imagen al 100% */
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Cubrir el área sin distorsionar */
+    transition: transform 0.3s; /* Transición suave para la imagen */
+}
+
+#newsContainer article:hover img {
+    transform: scale(1.05); /* Efecto de zoom en la imagen */
+}
+
+#newsContainer article h3 {
+    margin: 10px 0; /* Margen superior e inferior */
+    color: #333; /* Color del texto */
+    font-size: 1.2em; /* Tamaño de fuente mayor */
+}
+
+#newsContainer article p {
+    color: #555; /* Color del texto de descripción */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+#newsContainer article a {
+    display: inline-block; /* Para que el enlace tenga márgenes */
+    margin-top: 10px; /* Margen superior */
+    text-decoration: none; /* Sin subrayado */
+    color: #007BFF; /* Color azul */
+    font-weight: bold; /* Texto más destacado */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+#newsContainer article a:hover {
+    color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
 
 aside {
     flex: 1;
     margin-left: 20px;
     background: #fff; /* Fondo blanco para el aside */
-    padding: 15px;
+    padding: 10px; /* Reducir padding */
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en aside */
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+}
+
+aside h2 {
+    color: #007BFF; /* Color azul para el título */
+    font-size: 1.5em; /* Tamaño de fuente mayor para el título */
+    margin-bottom: 5px; /* Reducir margen inferior */
+}
+
+aside ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    flex-grow: 1; /* Permitir que la lista crezca */
+}
+
+aside li {
+    margin-bottom: 5px; /* Reducir margen inferior entre elementos de la lista */
+    padding: 3px; /* Reducir espaciado interno */
+    background: #f9f9f9; /* Fondo claro para los elementos de la lista */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+aside li:hover {
+    background: #e0e0e0; /* Fondo más oscuro al pasar el mouse */
+}
+
+aside li .action-buttons {
+    display: flex; /* Alinear botones en fila */
+    flex-direction: column; /* Alinear botones en columna */
+    gap: 5px; /* Espacio entre botones */
+}
+
+aside li button {
+    padding: 6px 10px; /* Reducir padding para el botón */
+    background: #007BFF; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Texto más destacado */
+}
+
+aside li button:hover {
+    background: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #007BFF; /* Color azul */
+    color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 }
 
 body.dark-mode {
     background-color: #121212;
-    color: #ffffff;
+    color: #ffffff; /* Color del texto en modo oscuro */
 }
 
 body.dark-mode header {
@@ -96,7 +198,7 @@ body.dark-mode header {
 
 body.dark-mode button {
     background-color: #ffffff;
-    color: #121212;
+    color: #121212; /* Color del texto en botones */
 }
 
 body.dark-mode #newsContainer article {
@@ -105,7 +207,119 @@ body.dark-mode #newsContainer article {
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Sombra en artículos oscuros */
 }
 
+body.dark-mode #newsContainer article h3 {
+    color: #ffffff; /* Color del título en artículos en modo oscuro */
+}
+
+body.dark-mode #newsContainer article p {
+    color: #ddd; /* Color del texto de descripción en modo oscuro */
+}
+
 body.dark-mode aside {
     background: #1e1e1e; /* Fondo oscuro para el aside */
     border: 1px solid #333; /* Borde más oscuro en modo oscuro */
+}
+
+body.dark-mode aside h2 {
+    color: #ffffff; /* Color del título en modo oscuro */
+}
+
+body.dark-mode aside li {
+    background: #2a2a2a; /* Fondo oscuro para los elementos de la lista */
+    color: #ffffff; /* Color del texto en los elementos de la lista */
+}
+
+body.dark-mode aside li:hover {
+    background: #333; /* Fondo más oscuro al pasar el mouse en modo oscuro */
+}
+
+body.dark-mode aside li .action-buttons button {
+    background: #007BFF; /* Fondo azul para botones en modo oscuro */
+    color: white; /* Texto blanco */
+}
+
+body.dark-mode aside li .action-buttons button:hover {
+    background: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+}
+
+/* Estilos específicos para los botones de navegación */
+footer button {
+    padding: 10px 20px; /* Aumentar el padding para los botones */
+    background: #ffffff; /* Fondo blanco */
+    color: #007BFF; /* Color azul */
+    border: 1px solid #007BFF; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Texto más destacado */
+    margin: 0 5px; /* Margen entre botones */
+}
+
+footer button:hover {
+    background: #007BFF; /* Fondo azul al pasar el mouse */
+    color: white; /* Texto blanco al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Estilos específicos para los selects */
+.search-container select {
+    padding: 10px; /* Aumentar el padding para los selects */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    background: white; /* Fondo blanco */
+    color: #007BFF; /* Color azul */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+    margin-left: 5px; /* Margen entre selects y otros elementos */
+}
+
+.search-container select:focus {
+    border-color: #007BFF; /* Cambiar color del borde al enfocar */
+    outline: none; /* Eliminar el contorno por defecto */
+}
+
+body.dark-mode .search-container select {
+    background: #2a2a2a; /* Fondo oscuro para selects en modo oscuro */
+    color: #ffffff; /* Texto blanco en selects */
+    border: 1px solid #555; /* Borde gris oscuro */
+}
+
+body.dark-mode .search-container select:focus {
+    border-color: #007BFF; /* Cambiar color del borde al enfocar en modo oscuro */
+}
+
+/* Estilos específicos para el botón "Agregar a Favoritos" */
+#newsContainer article button {
+    padding: 8px 12px; /* Aumentar el padding para el botón */
+    background: #ffcc00; /* Fondo amarillo */
+    color: #000; /* Color del texto negro */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Texto más destacado */
+    margin-top: 10px; /* Margen superior */
+}
+
+#newsContainer article button:hover {
+    background: #e6b800; /* Fondo amarillo más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Estilos para el botón "Leer más" en favoritos */
+.favorite-button {
+    padding: 8px 12px; /* Padding para el botón */
+    background: #007BFF; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Texto más destacado */
+    margin-top: 5px; /* Margen superior */
+    display: inline-block; /* Para que el botón se alinee correctamente */
+}
+
+.favorite-button:hover {
+    background: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
