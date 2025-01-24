@@ -1,4 +1,4 @@
-// events.js
+
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('search');
 const categorySelect = document.getElementById('category');

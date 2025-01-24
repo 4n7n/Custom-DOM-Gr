@@ -1,4 +1,4 @@
-// api.js
+
 const apiKey = '27bc68fc51bd467f9cd356622b3155b0';
 
 function fetchNews(currentPage, query, category, sort) {

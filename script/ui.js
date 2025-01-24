@@ -1,4 +1,4 @@
-// ui.js
+
 const newsContainer = document.getElementById('newsContainer');
 const favoritesList = document.getElementById('favoritesList');
 const pageInfo = document.getElementById('pageInfo');
